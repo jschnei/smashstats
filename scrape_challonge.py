@@ -3,7 +3,15 @@ import sys
 import urllib2
 
 def scrape_url(url):
-    html = urllib2.urlopen(url).read()
+    try:
+        html = urllib2.urlopen(url).read()
+    except ValueError:
+        print 'Error: URL {url} formatted incorrectly'.format(url=url)
+        return []
+    except urllib2.URLError:
+        print 'Error: Error retrieving URL {url} (url might not exist?)'.format(url=url)
+        return []
+
     soup = bs4.BeautifulSoup(html)
 
     tds = [td for td in soup.find_all('td') if 'match' in td.get('id','')]
