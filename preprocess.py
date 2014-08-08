@@ -32,7 +32,10 @@ def preprocess():
         players.add(match.winner)
         players.add(match.loser)
         
-    print sorted(list(players), key = lambda s:s.lower())
+    players = sorted(list(players), key = lambda s:s.lower())
+    
+    f = open('allmatches.json', 'w')
+    json.dump({'matches': matches, 'players': players}, f)
         
     
 if __name__ == '__main__':
