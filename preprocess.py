@@ -1,6 +1,8 @@
 from collections import namedtuple
 
 import json
+import pickle
+
 import scrape_challonge
 
 Match = namedtuple('Match', ['winner', 'loser', 'event'])
@@ -36,7 +38,27 @@ def preprocess():
     
     f = open('allmatches.json', 'w')
     json.dump({'matches': matches, 'players': players}, f)
-        
+    f.close()
     
+    f = open('allmatches.pkl', 'w')
+    pickle.dump({'matches': matches, 'players': players}, f)
+    f.close()
+    
+    plists = {player: {'wins':[], 'losses':[]} for player in players}
+    
+    for match in matches:
+        plists[match.winner]['wins'].append(match)
+        plists[match.loser]['losses'].append(match)
+   
+    
+    f = open('plists.json', 'w')
+    json.dump(plists, f)
+    f.close()
+    
+    f = open('plists.pkl', 'w')
+    pickle.dump(plists, f)
+    f.close()
+    
+
 if __name__ == '__main__':
     preprocess()
