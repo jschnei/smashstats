@@ -27,7 +27,7 @@ def preprocess():
     matches = []
     for event in events:
         ematches = scrape_challonge.scrape_url(event['url'])
-        matches += [Match(alias.get(winner,winner), alias.get(loser,loser), event['name']) for winner, loser in ematches]
+        matches += [Match(alias.get(winner,winner), alias.get(loser,loser), event['name'])._asdict() for winner, loser in ematches]
     
     players = set()
     for match in matches:

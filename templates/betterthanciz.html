@@ -9,5 +9,21 @@
     <div id="container">
         Are you better than C!Z?
     </div>
+    <div id="form">
+    <form method="post" enctype="multipart/form-data">
+    <input type="text" name="player" placeholder="Who are you?"  />
+    <input type="submit" value="Check" />
+    </form>
+    </div>
+    {% if msg %}
+    <div id="results">
+    {{msg}}
+    <ul>
+    {% for match in chain %}
+    <li>{{ match['winner'] }} beat {{ match['loser'] }} at {{ match['event'] }}</li>
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
   </body>
 </html>
