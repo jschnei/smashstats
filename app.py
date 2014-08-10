@@ -19,7 +19,7 @@ def main():
         if player == 'C!Z':
             msg = 'No (You are C!Z)'
         elif chain:
-            msg = 'Yes'
+            msg = 'Yes!'
         else:
             msg = 'No'
         
