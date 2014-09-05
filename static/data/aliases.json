@@ -4,20 +4,48 @@
         "aliases": ["ADVANCED","N2XX I ADVANCED"]
      },
      {
+        "tag": "Alex The God",
+        "aliases": ["Alex","Alex The God"]
+     },
+     {
+        "tag": "Swedish Delight",
+        "aliases": ["Bert | Swedish Delight", "James"]
+     },
+     {
         "tag": "BigFoig",
-        "aliases": ["Big Foig", "BigFoig"]
+        "aliases": ["Big Foig", "BigFoig", "BIgFoig"]
      },
      {
         "tag": "Call Me Mars",
-        "aliases": ["Call Me Mars", "Call me Mars", "Callmemars"]
+        "aliases": ["Call Me Mars", "Call me Mars", "Callmemars", "CallmeMars"]
+     },
+     {
+        "tag": "Copycat",
+        "aliases": ["green lantern / copycat"]
      },
      {
         "tag": "C!Z",
-        "aliases": ["C!Z","Ciz"]
+        "aliases": ["C!Z","Ciz","CiZ"]
+     },
+     {
+        "tag": "Daybreak",
+        "aliases": ["Daybreak","daybreak"]
+     },
+     {
+        "tag": "EazyDI",
+        "aliases": ["EazyDI","Eazy DI"]
      },
      {
         "tag": "EnV",
         "aliases": ["EnV","Env"]
+     },
+     {
+        "tag": "Fable",
+        "aliases": ["fable","Fable"]
+     },
+     {
+        "tag": "Himes",
+        "aliases": ["Himes","himes"]
      },
      {
         "tag": "Icer",
@@ -25,38 +53,70 @@
      },
      {
         "tag": "Jake From State Farm",
-        "aliases": ["2357", "Jake From State Farm", "Jake from State Farm"]
+        "aliases": ["2357", "Jake From State Farm", "Jake from State Farm", "jake from state farm", "MechaPikachu"]
      },
      {
         "tag": "Kosa",
-        "aliases": ["Ko$a","KOSA","ZEN I Kosa","ZEN | KoSa"]
+        "aliases": ["Ko$a","KOSA","ZEN I Kosa","ZEN | KoSa", "ko$a"]
+     },
+     {
+        "tag": "Link?",
+        "aliases": ["Link?","link?"]
      },
      {
         "tag": "mkolpnji",
-        "aliases": ["N2XX I mkolpnji","mkolpnji"]
+        "aliases": ["N2XX I mkolpnji","N2XX mkolpnji","mkolpnji"]
      },
      {
         "tag": "Nation",
-        "aliases": ["Nation","N2XX I Nation"]
+        "aliases": ["Nation","N2XX I Nation","nation"]
+     },
+     {
+        "tag": "NJzFinest",
+        "aliases": ["NJzFinest*", "NJzFinest"]
+     },
+     {
+        "tag": "Oasis",
+        "aliases": ["Oasis", "N2XX Oasis"]
      },
      {
         "tag": "Overflow",
         "aliases": ["OverFlow","ZEN I Overflow","ZEN | Overflow"]
      },
      {
+        "tag": "Scott",
+        "aliases": ["Scott","scott"]
+     },
+     {
         "tag": "Smelly Cat",
-        "aliases": ["Smelly Cat","smelly cat"]
+        "aliases": ["Smelly Cat","smelly cat", "smellycat"]
+     },
+     {
+        "tag": "Ultimate Raven",
+        "aliases": ["Ultimate Raven","UltimateRaven"]
      },
      {
         "tag": "Theftz",
         "aliases": ["ETS Theftz", "ETS_Theftz", "Theftz"]
-     },   
+     },  
+     {
+        "tag": "Tweek",
+        "aliases": ["Tweek", "MGFC Tweek"]
+     },  
+     {
+        "tag": "Vestboy_Myst",
+        "aliases": ["Vestboy_Myst", "Vestboy Myst"]
+     }, 
+     {
+        "tag": "Watson",
+        "aliases": ["Watson", "watson"]
+     },    
      {
         "tag": "YTG",
         "aliases": ["YTG","N2XX I YTG"]
      },
      {
         "tag": "Zealous",
-        "aliases": ["N2XX I Zealous","Zealous"]
+        "aliases": ["N2XX I Zealous","Zealous", "N2XX Zealous"]
      }
 ]

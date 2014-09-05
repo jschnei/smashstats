@@ -1,6 +1,7 @@
 from collections import namedtuple
 
 import json
+import os.path
 import pickle
 
 import scrape_challonge
@@ -19,20 +20,40 @@ def load_aliases():
     return lookup
         
 
-def preprocess():
+def preprocess(overwrite=False):
     alias = load_aliases()
     
     f = open('events.json', 'r')
     events = json.load(f)
     matches = []
     for event in events:
-        ematches = scrape_challonge.scrape_url(event['url'])
-        matches += [Match(alias.get(winner,winner), alias.get(loser,loser), event['name'])._asdict() for winner, loser in ematches]
+        print 'Processing event', event['name']
+        local = 'events/{id}.json'.format(id=event['id'])
+        if os.path.isfile(local) and not overwrite:
+            print 'File found locally, loading from local copy'
+            ematches = json.load(open(local, 'r'))['matches']
+            
+            # apply any new aliases
+            for match in ematches:
+                match['winner'] = alias.get(match['winner'], match['winner'])
+                match['loser'] = alias.get(match['loser'], match['loser'])
+                
+        else:
+            print 'Scraping file from challonge url:', event['url']
+            scrape = scrape_challonge.scrape_url(event['url'])
+            ematches = [Match(alias.get(winner,winner), alias.get(loser,loser), event['name'])._asdict() for winner, loser in scrape]
+            
+        # save local file
+        f = open(local, 'w')
+        json.dump({'matches': ematches, 'name': event['name']}, f)
+        f.close()
+        
+        matches += ematches
     
     players = set()
     for match in matches:
-        players.add(match.winner)
-        players.add(match.loser)
+        players.add(match['winner'])
+        players.add(match['loser'])
         
     players = sorted(list(players), key = lambda s:s.lower())
     
@@ -47,8 +68,8 @@ def preprocess():
     plists = {player: {'wins':[], 'losses':[]} for player in players}
     
     for match in matches:
-        plists[match.winner]['wins'].append(match)
-        plists[match.loser]['losses'].append(match)
+        plists[match['winner']]['wins'].append(match)
+        plists[match['loser']]['losses'].append(match)
    
     
     f = open('plists.json', 'w')

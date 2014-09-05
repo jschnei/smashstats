@@ -16,13 +16,33 @@
      },
      {
         "name": "Princeton Weekly 4",
-        "url": "http://princetonsmash.challonge.com/pw4",
+        "url": "http://princetonsmash.challonge.com/princetonweekly4",
         "id": "pw4"
      },
      {
         "name": "Princeton Weekly 5",
-        "url": "http://challonge.com/princetonsmashbros5",
+        "url": "http://princetonsmash.challonge.com/princetonweekly5",
         "id": "pw5"
+     },
+     {
+        "name": "Princeton Weekly 6",
+        "url": "http://princetonsmash.challonge.com/princetonweekly6",
+        "id": "pw6"
+     },
+     {
+        "name": "Princeton Weekly 7",
+        "url": "http://princetonsmash.challonge.com/princetonweekly7",
+        "id": "pw7"
+     },
+     {
+        "name": "Princeton Weekly 8",
+        "url": "http://princetonsmash.challonge.com/princetonweekly8",
+        "id": "pw8"
+     },
+     {
+        "name": "Jersey Japes 1",
+        "url": "http://jerseyjapes.challonge.com/JJ1singles",
+        "id": "jj1"
      }
-        
+
 ]
