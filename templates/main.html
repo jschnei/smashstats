@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Princeton Smash Stats DB</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+  <body>
+  <ul>
+  {% for player in players %}
+  <li><a href="whoknowswhat">{{player}}</a></li>
+  {% endfor %}
+  </ul>
+  </body>
+</html>
